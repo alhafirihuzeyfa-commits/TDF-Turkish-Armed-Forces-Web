@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDF - Türk Silahlı Kuvvetleri | Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-area" style="text-decoration:none;">
+            <div class="logo-box">TDF</div>
+            <span class="logo-text">TDF</span>
+        </a>
+        <a href="iletisim.html" class="menu-btn">Menü / Discord</a>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="badge-top">★ 2026 • RESMİ KURULUŞ</div>
+            <h1>DÜZEN<br>GÜÇ<br><span>ONUR</span></h1>
+            <p>TDF; disiplin, koordinasyon ve üstün operasyonel kabiliyet üzerine kurulmuş profesyonel bir savunma organizasyonudur. Güçlü komuta kadromuz ve disiplinli branşlarımızla her zaman göreve hazırız.</p>
+            
+            <div class="btn-group">
+                <a href="iletisim.html" class="btn-primary">DISCORD'A KATIL</a>
+                <a href="branslar.html" class="btn-secondary">BRANŞLARI İNCELE</a>
+            </div>
+        </section>
+
+        <!-- Canlı/Animasyonlu Sayaç Kartları -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2 class="counter" data-target="100">0</h2>
+                <p>AKTİF PERSONEL</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="6">0</h2>
+                <p>AKTİF BRANŞ</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="20">0</h2>
+                <p>BAŞARILI OPERASYON</p>
+            </div>
+            <div class="stat-card">
+                <h2>2026</h2>
+                <p>KURULUŞ YILI</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-col">
+            <div class="logo-box" style="display:inline-block; margin-bottom:10px;">TDF</div>
+            <p style="font-size:12px; max-width:250px;">Düzen, Güç, Onur. Türkiye Silahlı Kuvvetleri temelli profesyonel yapılanma.</p>
+        </div>
+        <div class="footer-col">
+            <h4>HIZLI MENÜ</h4>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="branslar.html">Branşlar</a></li>
+                <li><a href="wiki.html">Ansiklopedi (Wiki)</a></li>
+                <li><a href="departmanlar.html">Departmanlar</a></li>
+                <li><a href="komuta.html">Komuta Kadrosu</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>BAĞLANTILAR</h4>
+            <ul>
+                <li><a href="iletisim.html">Discord Sunucusu</a></li>
+                <li><a href="iletisim.html">Roblox Grubu</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Sayaç Animasyon Scripti -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 30;
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+  </html>
+  
